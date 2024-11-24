@@ -1,0 +1,93 @@
+/* Reset di base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+}
+
+header {
+    width: 100%;
+    padding: 20px;
+    background-color: #800020;
+    color: white;
+    text-align: center;
+}
+
+header .logo h1 {
+    font-size: 2.5rem;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+/* Dashboard */
+.dashboard-container {
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.dashboard-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.info-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.info-box h3 {
+    font-size: 2rem;
+    color: #800020;
+    margin-bottom: 20px;
+}
+
+.info-box p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.info-box a {
+    padding: 12px 25px;
+    background-color: #800020;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.info-box a:hover {
+    background-color: #b3003b;
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

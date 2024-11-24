@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEMA - Home</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <!-- Header con login utente -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>HEMA</h1>
+            </div>
+
+            <div class="login-section">
+                <!-- Pannello utente loggato -->
+                <div id="user-info" class="user-info" style="display: none;">
+                    <img src="img/avatar.png" alt="Avatar" class="user-avatar" id="user-avatar">
+                    <div class="user-details">
+                        <span id="user-name" class="user-name">Mario Rossi</span>
+                        <button onclick="logout()" class="btn-logout">Esci</button>
+                    </div>
+                </div>
+
+                <!-- Pannello di login -->
+                <div id="login-panel" class="panel-login" style="display: block;">
+                    <a href="login.html" class="btn-login">Accedi</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sezione Introduzione -->
+    <main>
+        <section class="intro">
+            <div class="intro-text">
+                <h2>Unisciti alla causa, salva una vita!</h2>
+                <p>Ogni anno migliaia di persone dipendono dalla donazione di sangue. Scopri come puoi fare la differenza.</p>
+            </div>
+        </section>
+
+        <!-- Sezione Gruppi Sanguigni -->
+        <section class="blood-types">
+            <h3>I Gruppi Sanguigni</h3>
+            <div class="blood-group-container">
+                <div class="blood-group-box">
+                    <img src="img/group-a.png" alt="Gruppo A">
+                    <h4>Gruppo A</h4>
+                    <p>Il gruppo sanguigno A può ricevere sangue da A, O. Può donare a A, AB.</p>
+                </div>
+                <div class="blood-group-box">
+                    <img src="img/group-b.png" alt="Gruppo B">
+                    <h4>Gruppo B</h4>
+                    <p>Il gruppo sanguigno B può ricevere sangue da B, O. Può donare a B, AB.</p>
+                </div>
+                <div class="blood-group-box">
+                    <img src="img/group-ab.png" alt="Gruppo AB">
+                    <h4>Gruppo AB</h4>
+                    <p>Il gruppo sanguigno AB può ricevere sangue da A, B, AB, O. Può donare solo ad AB.</p>
+                </div>
+                <div class="blood-group-box">
+                    <img src="img/group-o.png" alt="Gruppo O">
+                    <h4>Gruppo O</h4>
+                    <p>Il gruppo sanguigno O può ricevere solo da O. Può donare a A, B, AB, O.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Azioni: Dona o Richiedi -->
+        <section class="actions">
+            <div class="action-wrapper">
+                <div class="action-box">
+                    <h3>Dona Sangue</h3>
+                    <p>Aiuta a salvare vite umane con una donazione di sangue.</p>
+                    <a href="dona.html" class="btn">Dona Ora</a>
+                </div>
+                <div class="action-box">
+                    <h3>Richiedi Donazione</h3>
+                    <p>Se hai bisogno di sangue, invia una richiesta e troveremo donatori per te.</p>
+                    <a href="richiedi.html" class="btn">Richiedi Ora</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 HEMA. Tutti i diritti riservati.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

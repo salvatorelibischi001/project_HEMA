@@ -1,0 +1,153 @@
+/* Reset dei margini e padding di default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Impostazioni generali della pagina */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenitore del form di login */
+.login-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Animazione di apparizione */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Titolo della pagina */
+h1 {
+    color: #d9534f;
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    animation: bounceIn 1s ease-out;
+}
+
+/* Animazione di rimbalzo sul titolo */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Style per il form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style per input */
+input[type="text"], input[type="password"] {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+/* Focus sugli input */
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #d9534f;
+    outline: none;
+    box-shadow: 0 0 5px rgba(217, 83, 79, 0.5);
+}
+
+/* Style per il bottone di login */
+button[type="submit"] {
+    padding: 12px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #c9302c;
+}
+
+/* Link per il recupero password */
+.forgot-password {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #d9534f;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Messaggio di errore */
+.error-message {
+    color: #ff3b3b;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Messaggio di successo */
+.success-message {
+    color: #5bc0de;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Link per la registrazione */
+.create-account {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #d9534f;
+    text-decoration: none;
+}
+
+.create-account:hover {
+    text-decoration: underline;
+}
+
+/* Media query per dispositivi mobili */
+@media screen and (max-width: 480px) {
+    .login-container {
+        padding: 30px;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
