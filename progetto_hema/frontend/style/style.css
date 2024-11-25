@@ -4,82 +4,81 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f4f4f4;
+    background-color: #FFFDD0;
 }
 
 /* Header */
 header {
     background-color: #8B2C1D; /* Colore Rosso Scuro */
-    padding: 20px;
+    padding: 20px 40px; /* Spaziatura interna */
     color: white;
     position: relative;
 }
 
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Layout Flexbox */
+    justify-content: space-between; /* Logo a sinistra, login a destra */
+    align-items: center; /* Centra verticalmente il logo e la sezione login */
 }
 
+/* Logo */
 .logo h1 {
     font-size: 2rem;
     margin: 0;
 }
 
-/* Modifica del login */
+/* Sezione Login */
 .login-section {
-    position: relative;
+    display: flex; /* Abilita Flexbox */
+    align-items: center; /* Centra verticalmente il contenuto */
+    justify-content: flex-end; /* Sposta il contenuto verso destra */
+    gap: 10px; /* Spaziatura tra i pulsanti Accedi e Registrati */
 }
 
-.panel-login {
-    display: none; /* Nascondi il pannello inizialmente */
-    position: absolute;
-    top: 50px;  /* Posiziona il pannello sotto il logo */
-    right: 0;
-    background-color: #f7f0eb;
-    width: 300px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    z-index: 10;
+/* Pannello di Login */
+#login-panel {
+    display: block; /* Assicura che i pulsanti siano visibili */
+    text-align: right; /* Allinea il contenuto del pannello a destra */
 }
 
-.panel-login h4 {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-}
-
-.panel-login input[type="text"], 
-.panel-login input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.panel-login .btn-login {
+/* Pulsante Accedi */
+.btn-login {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #d95441; /* Colore rosso chiaro per il login */
+    background-color: #d95441; /* Colore rosso chiaro per il pulsante */
     color: white;
     text-decoration: none;
+    padding: 10px 20px;
     border-radius: 5px;
-    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
     text-align: center;
-}
-
-.login-button {
-    background-color: #d95441; /* Colore login */
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Mostrare il pannello al passaggio del mouse sopra il login */
-.login-section:hover .panel-login {
-    display: block; /* Mostra il pannello al passaggio del mouse */
+.btn-login:hover {
+    background-color: #b03e33; /* Colore più scuro per l'hover */
+    transform: translateY(-2px); /* Leggero sollevamento */
+}
+
+/* Pulsante Registrati */
+.btn-sign_up {
+    display: inline-block;
+    background-color: #d95441; /* Colore rosso chiaro per il pulsante */
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-sign_up:hover {
+    background-color: #b03e33; /* Colore più scuro per l'hover */
+    transform: translateY(-2px); /* Leggero sollevamento */
 }
 
 /* Main Section */
@@ -89,7 +88,7 @@ main {
 
 /* Introduzione */
 .intro {
-    background-color: #f2e1d4;
+    background-color:#f7f0eb ;
     padding: 30px;
     margin-bottom: 40px;
     text-align: center;
@@ -98,6 +97,7 @@ main {
 
 .intro-text h2 {
     font-size: 2.2rem;
+    font-style: italic;
 }
 
 .intro-text p {
@@ -143,13 +143,6 @@ main {
     opacity: 1;
 }
 
-.blood-group-box img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 15px;
-    border-radius: 50%;
-}
-
 .blood-group-box h4 {
     font-size: 1.5rem;
     margin-bottom: 10px;
@@ -163,26 +156,31 @@ main {
 
 /* Azioni */
 .actions {
-    display: flex;
-    justify-content: center; /* Centra i pannelli orizzontalmente */
-    gap: 40px; /* Distanza tra i due pannelli */
-    margin-bottom: 40px;
+    margin: 40px 0; /* Spaziatura sopra e sotto la sezione */
+}
+
+.action-wrapper {
+    display: flex; /* Abilita Flexbox */
+    justify-content: center; /* Centra orizzontalmente le box */
+    align-items: center; /* Centra verticalmente il contenuto */
+    gap: 40px; /* Spaziatura tra le box */
+    flex-wrap: wrap; /* Permette il wrap se non c'è abbastanza spazio */
 }
 
 .action-box {
     background-color: #d95441; /* Colore Rosso Chiaro */
     color: white;
-    padding: 30px; /* Aumentato il padding per farli più grandi */
+    padding: 30px; /* Spaziatura interna */
     border-radius: 8px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 250px; /* Larghezza fissa per i pannelli */
+    width: 250px; /* Larghezza fissa */
 }
 
 .action-box:hover {
-    transform: translateY(-10px); /* Solleva i pannelli "Dona Ora" e "Richiedi Donazione" */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombra più intensa al passaggio del mouse */
+    transform: translateY(-10px); /* Solleva la box al passaggio del mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Ombra più intensa */
 }
 
 .action-box h3 {
@@ -204,7 +202,7 @@ main {
 }
 
 .action-box .btn:hover {
-    background-color: #f7f0eb;
+    background-color: #f7f0eb; /* Colore più chiaro */
 }
 
 /* Footer */
@@ -214,3 +212,13 @@ footer {
     background-color: #8B2C1D; /* Colore Rosso Scuro */
     color: white;
 }
+
+#about_us{
+    text-decoration: none;
+    color: white;
+}
+
+#about_us:hover{
+    color: yellow;
+}
+

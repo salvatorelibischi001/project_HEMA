@@ -1,0 +1,145 @@
+/* Reset dei margini e padding di default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FFFDD0; /* Bianco plasma */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garantisce l'altezza minima della pagina */
+}
+
+/* Header */
+header {
+    width: 100%; /* Estensione completa */
+    background-color: #8B2C1D; /* Borgogna */
+    padding: 20px 40px; /* Spaziatura interna */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    font-size: 2rem;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: yellow;
+    text-decoration: none;
+}
+
+/* Contenitore del form */
+main {
+    flex: 1; /* Permette al box di adattarsi al centro della pagina */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background-color: #FFFFFF; /* Bianco puro */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Box shadow leggera */
+    width: 100%;
+    max-width: 800px; /* Box più largo */
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Animazione di apparizione */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Titolo */
+h2 {
+    color: #8B2C1D;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Style per il form */
+form {
+    display: grid; /* Disposizione a griglia */
+    grid-template-columns: repeat(2, 1fr); /* Due colonne */
+    gap: 20px; /* Spaziatura tra i campi */
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style per input e select */
+input[type="text"], input[type="email"], input[type="password"], select {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+/* Focus sugli input e select */
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, select:focus {
+    border-color: #8B2C1D;
+    outline: none;
+    box-shadow: 0 0 5px rgba(139, 44, 29, 0.5);
+}
+
+/* Pulsante */
+button[type="submit"] {
+    grid-column: span 2; /* Occupa tutta la riga */
+    padding: 12px;
+    background-color: #8B2C1D; /* Borgogna */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #A63A2E;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #8B2C1D;
+    padding: 30px 40px;
+    text-align: center;
+    color: white;
+    margin-top: auto; /* Posiziona il footer in basso */
+}
+
+#about_us{
+    text-decoration: none;
+    color: white;
+}
+
+#about_us:hover{
+    color: yellow;
+}

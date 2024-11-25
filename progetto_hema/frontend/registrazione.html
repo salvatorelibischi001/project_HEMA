@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+    <link rel="icon" type="image/png" href="favicon_32x32.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrazione - HEMA</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/registrazione.css">
 </head>
 <body>
     <header>
@@ -21,17 +22,35 @@
         <section class="form-container">
             <h2>Registrati per Donare</h2>
             <form id="form-registrazione">
-                <label for="nome">Nome Completo:</label>
-                <input type="text" id="nome" name="nome" placeholder="Il tuo nome" required>
+                <!-- Nome Completo -->
+                <label for="nome">Nome e cognome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Nome e cognome" required>
                 
+                <!-- Email -->
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="La tua email" required>
                 
+                <!-- Password -->
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" placeholder="Crea una password" required>
                 
+                <!-- Indirizzo -->
                 <label for="indirizzo">Indirizzo di residenza (se scegli donazione a domicilio):</label>
-                <input type="text" id="indirizzo" name="indirizzo" placeholder="Il tuo indirizzo" required>
+                <input type="text" id="indirizzo" name="indirizzo" placeholder="Il tuo indirizzo">
+
+                <!-- Gruppo Sanguigno -->
+                <label for="gruppo-sanguigno">Gruppo Sanguigno:</label>
+                <select id="gruppo-sanguigno" name="gruppo-sanguigno" required>
+                    <option value="">Seleziona il tuo gruppo sanguigno</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="0+">0+</option>
+                    <option value="0-">0-</option>
+                </select>
 
                 <button type="submit" class="btn">Registrati</button>
             </form>
@@ -39,7 +58,8 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 HEMA. Tutti i diritti riservati.</p>
+        <p>2024 HEMA. Progetto per Università degli studi Napoli Parthenope.</p><br>
+        <a href="about_us.html" id="about_us"> Chi siamo?</a>
     </footer>
 </body>
 </html>
