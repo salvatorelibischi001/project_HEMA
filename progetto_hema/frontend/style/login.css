@@ -5,15 +5,48 @@
     box-sizing: border-box;
 }
 
-/* Impostazioni generali della pagina */
+/* Corpo */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #FFFDD0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-color: #FFFDD0; /* Bianco plasma */
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garantisce l'altezza minima della pagina */
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: #8B2C1D; /* Borgogna */
+    padding: 20px 40px;
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Logo a sinistra, link a destra */
+    align-items: center;
+}
+
+header .logo h1 {
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none; /* Nessuna linea */
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+header nav a:hover {
+    color: yellow; /* Colore giallo all'hover */
+    text-decoration: none; /* Sottolinea all'hover */
 }
 
 /* Contenitore del form di login */
@@ -26,6 +59,7 @@ body {
     max-width: 400px;
     text-align: center;
     animation: fadeIn 1s ease-out;
+    margin: auto; /* Centra il box verticalmente e orizzontalmente */
 }
 
 /* Animazione di apparizione */
@@ -46,7 +80,6 @@ h1 {
     font-size: 28px;
     margin-bottom: 30px;
     font-weight: bold;
-    animation: bounceIn 1s ease-out;
 }
 
 /* Style per il form */
@@ -76,7 +109,7 @@ input[type="text"]:focus, input[type="password"]:focus {
 /* Style per il bottone di login */
 button[type="submit"] {
     padding: 12px;
-    background-color: #8B2C1D;
+    background-color: #8B2C1D; /* Borgogna */
     color: white;
     border: none;
     border-radius: 4px;
@@ -89,42 +122,68 @@ button[type="submit"]:hover {
     background-color: #A63A2E;
 }
 
-/* Link per il recupero password */
+/* Link per "Password dimenticata" */
 .forgot-password {
     margin-top: 10px;
     font-size: 14px;
-    color: #d9534f;
+    color: #d9534f; /* Colore rosso chiaro */
     text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 .forgot-password:hover {
     text-decoration: underline;
+    color: #A63A2E; /* Colore rosso scuro */
 }
 
-/* Messaggio di errore */
+/* Link per "Non hai un account?" */
+.create-account a {
+    font-size: 14px;
+    color: #d9534f; /* Colore rosso chiaro */
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.create-account a:hover {
+    text-decoration: underline;
+    color: #A63A2E; /* Colore rosso scuro */
+}
+
+/* Messaggi di errore e successo */
+.error-message, .success-message {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
 .error-message {
     color: #ff3b3b;
-    margin-top: 10px;
-    font-size: 14px;
 }
 
-/* Messaggio di successo */
 .success-message {
     color: #5bc0de;
-    margin-top: 10px;
-    font-size: 14px;
 }
 
-/* Link per la registrazione */
-.create-account {
-    margin-top: 20px;
-    font-size: 14px;
-    color: #d9534f;
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #8B2C1D; /* Borgogna */
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+    font-size: medium;
+    margin-top: auto;
+}
+
+footer a {
+    font-size: medium;
+    color: white;
     text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-.create-account:hover {
-    text-decoration: underline;
+footer a:hover {
+    color: yellow;
+    text-decoration: none;
 }
 
 /* Media query per dispositivi mobili */

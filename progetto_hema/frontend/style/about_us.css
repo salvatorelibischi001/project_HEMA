@@ -1,0 +1,91 @@
+/* Reset dei margini e padding di default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FFFDD0; /* Bianco plasma */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garantisce l'altezza minima della pagina */
+}
+
+/* Header */
+header {
+    width: 100%; /* Estensione completa */
+    background-color: #8B2C1D; /* Borgogna */
+    padding: 20px 40px; /* Spaziatura interna */
+    color: white;
+    display: flex;
+    justify-content: space-between; /* Logo a sinistra, link a destra */
+    align-items: center;
+}
+
+header .logo h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+header nav {
+    display: flex;
+    gap: 20px; /* Spaziatura tra i link */
+}
+
+header nav a {
+    color: white;
+    text-decoration: none; /* Nessuna linea iniziale */
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+header nav a:hover {
+    color: yellow; /* Colore giallo all'hover */
+    text-decoration: none; /* Sottolinea all'hover */
+}
+
+/* Sezione About Us */
+.about-us {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.about-us h2 {
+    color: #8B2C1D;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.about-us h3 {
+    color: #8B2C1D;
+    font-size: 22px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.about-us p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    width: 100%; /* Estensione completa */
+    background-color: #8B2C1D; /* Borgogna */
+    padding: 30px 40px; /* Stessa altezza della home */
+    text-align: center;
+    color: white;
+    font-size: medium;
+    margin-top: auto; /* Posiziona il footer in basso */
+}
