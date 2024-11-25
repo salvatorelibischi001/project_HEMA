@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 
 // Registrazione utente
 exports.registrazione = async (req, res) => {
-  const { nome, email, password, isDonatore, indirizzo, idSangue} = req.body;
+  const { nome, email, password, isDonatore, indirizzo, idGruppo} = req.body;
 
   try {
     const esistente = await Utente.findOne({ email });
@@ -18,7 +18,7 @@ exports.registrazione = async (req, res) => {
       password: await bcrypt.hash(password, 10),
       isDonatore,
       indirizzo,
-      idSangue,
+      idGruppo,
     });
 
     await nuovoUtente.save();
