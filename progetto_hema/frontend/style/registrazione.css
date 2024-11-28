@@ -28,18 +28,31 @@ header {
 
 header .logo h1 {
     font-size: 2rem;
+    margin: 0;
+}
+
+header nav {
+    display: flex;
+    gap: 5px; /* Spaziatura tra i pulsanti */
 }
 
 header nav a {
-    color: white;
+    display: inline-block;
+    background-color: white;
+    color: #8B2C1D; /* Borgogna */
     text-decoration: none;
-    margin-left: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
     font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 header nav a:hover {
-    color: yellow;
-    text-decoration: none;
+    background-color: #f7f0eb; /* Colore più chiaro */
+    transform: translateY(-2px); /* Leggero sollevamento */
 }
 
 /* Contenitore del form */
@@ -135,11 +148,14 @@ footer {
     margin-top: auto; /* Posiziona il footer in basso */
 }
 
-#about_us{
-    text-decoration: none;
+footer a {
+    font-size: medium;
     color: white;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
-#about_us:hover{
+footer a:hover {
+    text-decoration: underline;
     color: yellow;
 }

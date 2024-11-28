@@ -34,19 +34,27 @@ header .logo h1 {
 
 header nav {
     display: flex;
-    gap: 20px;
+    gap: 5px;
 }
 
+/* Pulsanti "Home" e "Registrati" */
 header nav a {
-    color: white;
-    text-decoration: none; /* Nessuna linea */
+    display: inline-block;
+    background-color: white;
+    color: #8B2C1D; /* Borgogna */
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
     font-weight: bold;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 header nav a:hover {
-    color: yellow; /* Colore giallo all'hover */
-    text-decoration: none; /* Sottolinea all'hover */
+    background-color: #f7f0eb; /* Colore più chiaro */
+    transform: translateY(-2px); /* Leggero sollevamento */
 }
 
 /* Contenitore del form di login */
@@ -182,7 +190,7 @@ footer a {
 }
 
 footer a:hover {
-    color: yellow;
+    color: #f7f0eb;
     text-decoration: none;
 }
 

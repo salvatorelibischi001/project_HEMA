@@ -31,21 +31,25 @@ header .logo h1 {
     margin: 0;
 }
 
-header nav {
-    display: flex;
-    gap: 20px; /* Spaziatura tra i link */
-}
+
 
 header nav a {
-    color: white;
-    text-decoration: none; /* Nessuna linea iniziale */
+    display: inline-block;
+    background-color: white;
+    color: #8B2C1D; /* Borgogna */
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
     font-weight: bold;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 header nav a:hover {
-    color: yellow; /* Colore giallo all'hover */
-    text-decoration: none; /* Sottolinea all'hover */
+    background-color: #f7f0eb; /* Colore più chiaro */
+    transform: translateY(-2px); /* Leggero sollevamento */
 }
 
 /* Sezione About Us */
