@@ -21,7 +21,7 @@
     <main>
         <section class="form-container">
             <h2>Registrati per Donare</h2>
-            <form id="form-registrazione">
+            <form id="form-registrazione" action="http://localhost:3000/api/auth/register" method="POST">
                 <!-- Nome Completo -->
                 <label for="nome">Nome e cognome:</label>
                 <input type="text" id="nome" name="nome" placeholder="Nome e cognome" required>
@@ -61,5 +61,6 @@
         <p>2024 HEMA. Progetto per Università degli studi Napoli Parthenope.</p><br>
         <a href="about_us.html" id="about_us"> Chi siamo?</a>
     </footer>
+    <script src="script/registrazione.js"></script>
 </body>
 </html>

@@ -1,37 +1,24 @@
-// Importazione dei moduli necessari
-const express = require("express"); // Framework per creare il server
-const mongoose = require("mongoose"); // Libreria per interagire con MongoDB
-const cors = require("cors"); // Per gestire le richieste cross-origin
+const express = require('express');
+const mongoose = require('mongoose');
+const bookingRoutes = require('./rotte/rotteprenotazione');
 
-// Configurazione dell'app Express
 const app = express();
-const PORT = process.env.PORT || 3000; // Porta del server (di default 3000)
 
-// Middleware
-app.use(cors()); // Permette richieste da origini diverse (frontend-backend)
-app.use(express.json()); // Parsing del body delle richieste in JSON
+// Middleware per il parsing dei dati JSON
+app.use(express.json());
 
 // Connessione a MongoDB
-const MONGO_URI = "mongodb://localhost:27017/hema"; // Stringa di connessione al database
-mongoose
-  .connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log("Connesso al database MongoDB"))
-  .catch((error) => console.error("Errore di connessione a MongoDB:", error));
+mongoose.connect('mongodb://localhost:27017/hema', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+}).then(() => console.log('Connessione a MongoDB riuscita!'))
+  .catch(err => console.error('Errore nella connessione a MongoDB:', err));
 
-// Importa le rotte
-const authRoutes = require("./rotte/rotteautenticazione"); // Rotte per autenticazione
-const bookingRoutes = require("./rotte/rotteprenotazioni"); // Rotte per prenotazioni
+// Rotte
+app.use('/api/bookings', bookingRoutes);
 
-// Usa le rotte definite nei file separati
-app.use("/api/auth", authRoutes); // Endpoint per autenticazione
-app.use("/api/bookings", bookingRoutes); // Endpoint per prenotazioni
-
-// Endpoint base per testare il server
-app.get("/", (req, res) => {
-  res.send("Benvenuto nel backend di HEMA!");
-});
-
-// Avvia il server
+// Avvio del server
+const PORT = 3000;
 app.listen(PORT, () => {
-  console.log(`Server avviato e in ascolto sulla porta ${PORT}`);
+  console.log(`Server in ascolto su http://localhost:${PORT}`);
 });

@@ -1,8 +1,9 @@
-const express = require("express");
-const { registrazione, login } = require("../controllori/controlloreautenticazione");
+const express = require('express');
+const { register } = require('../controllori/controlloreautenticazione');
+
 const router = express.Router();
 
-router.post("/register", registrazione);
-router.post("/login", login);
+// Rotta per registrazione
+router.post('/register', register);
 
 module.exports = router;
