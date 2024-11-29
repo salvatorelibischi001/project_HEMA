@@ -1,9 +1,10 @@
-const express = require('express');
-const router = express.Router();
-const controlloreAutenticazione = require('/controllori/controlloreAutenticazione');
-
-// Rotte
-router.post('/registrazione', controlloreAutenticazione.registrazione);
-router.post('/login', controlloreAutenticazione.login);
-
-module.exports = router;
+exports.creaPrenotazione = (req, res) => {
+    const { utenteId, tipoPrenotazione } = req.body;
+  
+    // Simulazione di prenotazione
+    res.json({
+      message: "Prenotazione creata con successo",
+      data: { utenteId, tipoPrenotazione, data: new Date() },
+    });
+  };
+  
