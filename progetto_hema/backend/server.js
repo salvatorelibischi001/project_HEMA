@@ -1,24 +1,30 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const bookingRoutes = require('./rotte/rotteprenotazione');
+const cors = require('cors');
+const authRoutes = require('./rotte/rotteautenticazione');
+const prenotazioneRoutes = require('./rotte/rotteprenotazione');
+const rotteautenticazione = require('./rotte/rotteautenticazione');
+
 
 const app = express();
 
-// Middleware per il parsing dei dati JSON
+// Middleware
 app.use(express.json());
+app.use(cors());
 
 // Connessione a MongoDB
-mongoose.connect('mongodb://localhost:27017/hema', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-}).then(() => console.log('Connessione a MongoDB riuscita!'))
-  .catch(err => console.error('Errore nella connessione a MongoDB:', err));
+mongoose
+    .connect('mongodb://localhost:27017/hema', { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log('Connesso a MongoDB'))
+    .catch((err) => console.error('Errore connessione MongoDB:', err));
 
 // Rotte
-app.use('/api/bookings', bookingRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/prenotazione', prenotazioneRoutes);
+app.use('/api/auth', rotteautenticazione);
 
 // Avvio del server
-const PORT = 3000;
+const PORT = 4000;
 app.listen(PORT, () => {
-  console.log(`Server in ascolto su http://localhost:${PORT}`);
+    console.log(`Server in ascolto su http://localhost:${PORT}`);
 });

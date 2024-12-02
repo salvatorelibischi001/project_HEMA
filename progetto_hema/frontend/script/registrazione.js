@@ -5,10 +5,10 @@ document.getElementById('form-registrazione').addEventListener('submit', async (
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
   const indirizzo = document.getElementById('indirizzo').value;
-  const gruppoSanguigno = document.getElementById('gruppo-sanguigno').value;
+  const gruppoSanguigno = document.getElementById('gruppoSanguigno').value;
 
   try {
-      const response = await fetch('http://localhost:3000/api/auth/register', {
+      const response = await fetch('http://localhost:4000/api/auth/register', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ nome, email, password, indirizzo, gruppoSanguigno })

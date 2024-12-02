@@ -74,18 +74,6 @@ main {
     animation: fadeIn 1s ease-out;
 }
 
-/* Animazione di apparizione */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 /* Titolo */
 h2 {
     color: #8B2C1D;
@@ -125,7 +113,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focu
 button[type="submit"] {
     grid-column: span 2; /* Occupa tutta la riga */
     padding: 12px;
-    background-color: #8B2C1D; /* Borgogna */
+    background-color: #8B2C1D;
     color: white;
     border: none;
     border-radius: 4px;

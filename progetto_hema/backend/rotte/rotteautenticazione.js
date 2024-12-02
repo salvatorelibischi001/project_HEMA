@@ -1,9 +1,10 @@
 const express = require('express');
-const { register } = require('../controllori/controlloreautenticazione');
+const { register, login } = require('../controllori/controlloreautenticazione');
 
 const router = express.Router();
 
-// Rotta per registrazione
+// Rotta per la registrazione
 router.post('/register', register);
+router.post('/login', login);
 
 module.exports = router;

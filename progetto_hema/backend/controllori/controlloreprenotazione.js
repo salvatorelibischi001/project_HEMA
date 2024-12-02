@@ -1,39 +1,33 @@
-const Booking = require('../modelli/prenotazione'); // Importa il modello Prenotazione
+const Prenotazione = require('../modelli/prenotazione');
 
-// Funzione per creare una prenotazione
-exports.createBooking = async (req, res) => {
-  try {
-    const { nome, email, tipo, data, note } = req.body;
+// Creazione di una prenotazione
+const creaPrenotazione = async (req, res) => {
+    try {
+        const { utenteId, tipo, data } = req.body;
 
-    // Validazione dei dati (opzionale, puoi estenderla)
-    if (!nome || !email || !tipo || !data) {
-      return res.status(400).json({ message: 'Tutti i campi obbligatori devono essere compilati.' });
+        const nuovaPrenotazione = new Prenotazione({
+            utenteId,
+            tipo,
+            data,
+        });
+
+        await nuovaPrenotazione.save();
+        res.status(201).json({ message: 'Prenotazione creata con successo', nuovaPrenotazione });
+    } catch (err) {
+        console.error('Errore durante la creazione della prenotazione:', err);
+        res.status(500).json({ message: 'Errore del server' });
     }
-
-    // Creazione di una nuova prenotazione
-    const newBooking = new Booking({
-      nome,
-      email,
-      tipo,
-      data,
-      note,
-    });
-
-    await newBooking.save(); // Salva la prenotazione nel database
-    res.status(201).json({ message: 'Prenotazione creata con successo!', booking: newBooking });
-  } catch (error) {
-    console.error('Errore nella creazione della prenotazione:', error);
-    res.status(500).json({ message: 'Errore nella creazione della prenotazione.', error });
-  }
 };
 
-// Funzione per ottenere tutte le prenotazioni
-exports.getBookings = async (req, res) => {
-  try {
-    const bookings = await Booking.find(); // Recupera tutte le prenotazioni dal database
-    res.status(200).json(bookings);
-  } catch (error) {
-    console.error('Errore nel recupero delle prenotazioni:', error);
-    res.status(500).json({ message: 'Errore nel recupero delle prenotazioni.', error });
-  }
+// Recupera prenotazioni
+const recuperaPrenotazioni = async (req, res) => {
+    try {
+        const prenotazioni = await Prenotazione.find().populate('utenteId', 'nome email');
+        res.status(200).json(prenotazioni);
+    } catch (err) {
+        console.error('Errore durante il recupero delle prenotazioni:', err);
+        res.status(500).json({ message: 'Errore del server' });
+    }
 };
+
+module.exports = { creaPrenotazione, recuperaPrenotazioni };

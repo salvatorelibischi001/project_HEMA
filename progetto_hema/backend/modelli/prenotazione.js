@@ -1,15 +1,12 @@
 const mongoose = require('mongoose');
 
-// Definizione dello schema Prenotazione
-const bookingSchema = new mongoose.Schema({
-  nome: { type: String, required: true }, // Nome del richiedente
-  email: { type: String, required: true }, // Email
-  tipo: { type: String, required: true }, // Tipo di prenotazione (es: donazione/richiesta)
-  data: { type: Date, required: true }, // Data della prenotazione
-  note: { type: String }, // Note opzionali
-}, {
-  timestamps: true, // Aggiunge createdAt e updatedAt automaticamente
+const prenotazioneSchema = new mongoose.Schema({
+    utenteId: { type: mongoose.Schema.Types.ObjectId, ref: 'Utente', required: true },
+    tipo: { type: String, enum: ['donazione', 'ricezione'], required: true },
+    data: { type: Date, required: true },
+    stato: { type: String, enum: ['pendente', 'completata'], default: 'pendente' },
 });
 
-// Esportazione del modello
-module.exports = mongoose.model('Booking', bookingSchema);
+const Prenotazione = mongoose.model('Prenotazione', prenotazioneSchema);
+
+module.exports = Prenotazione;
