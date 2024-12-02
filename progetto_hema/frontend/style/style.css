@@ -155,11 +155,11 @@ main {
     margin: 40px 0; /* Spaziatura sopra e sotto la sezione */
 }
 
+/*Box richiesta e donazione*/
 .action-wrapper {
     display: flex; /* Abilita Flexbox */
-    justify-content: center; /* Centra orizzontalmente le box */
+    justify-content: center; /* Centra orizzontalmente la box */
     align-items: center; /* Centra verticalmente il contenuto */
-    gap: 40px; /* Spaziatura tra le box */
     flex-wrap: wrap; /* Permette il wrap se non c'è abbastanza spazio */
 }
 
