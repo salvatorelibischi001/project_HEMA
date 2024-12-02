@@ -145,20 +145,6 @@ button[type="submit"]:hover {
     color: #A63A2E; /* Colore rosso scuro */
 }
 
-/* Messaggi di errore e successo */
-.error-message, .success-message {
-    font-size: 14px;
-    margin-top: 10px;
-}
-
-.error-message {
-    color: #ff3b3b;
-}
-
-.success-message {
-    color: #5bc0de;
-}
-
 /* Footer */
 footer {
     width: 100%;
@@ -178,5 +164,5 @@ footer a {
 
 footer a:hover {
     color: yellow;
-    text-decoration: underline;
+    text-decoration: none;
 }
