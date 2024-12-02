@@ -174,22 +174,9 @@ footer a {
     font-size: medium;
     color: white;
     text-decoration: none;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 footer a:hover {
-    color: #f7f0eb;
-    text-decoration: none;
-}
-
-/* Media query per dispositivi mobili */
-@media screen and (max-width: 480px) {
-    .login-container {
-        padding: 30px;
-        width: 90%;
-    }
-
-    h1 {
-        font-size: 24px;
-    }
+    color: yellow;
+    text-decoration: underline;
 }

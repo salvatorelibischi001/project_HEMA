@@ -15,8 +15,6 @@ app.use(cors());
 // Connessione a MongoDB
 mongoose
     .connect('mongodb://localhost:27017/hema', { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log('Connesso a MongoDB'))
-    .catch((err) => console.error('Errore connessione MongoDB:', err));
 
 // Rotte
 app.use('/api/auth', authRoutes);
