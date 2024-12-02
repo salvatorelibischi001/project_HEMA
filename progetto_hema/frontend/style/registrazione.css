@@ -51,7 +51,7 @@ header nav a {
 }
 
 header nav a:hover {
-    background-color: #f7f0eb; /* Colore più chiaro */
+    background-color: #f7f0eb;
     transform: translateY(-2px); /* Leggero sollevamento */
 }
 

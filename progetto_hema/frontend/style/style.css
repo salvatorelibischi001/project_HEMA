@@ -49,9 +49,7 @@ header {
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 5px;
-    font-size: 1rem;
     font-weight: bold;
-    text-align: center;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -69,9 +67,7 @@ header {
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 5px;
-    font-size: 1rem;
     font-weight: bold;
-    text-align: center;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -121,15 +117,15 @@ main {
 }
 
 .blood-group-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    display: grid; /*Disponi i gruppi verticalmente*/
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));/*Disponi 1 gruppo per colonna*/
     gap: 30px;
     max-width: 1200px; /* Impostiamo una larghezza massima per la sezione */
     margin: 0 auto; /* Centriamo la griglia nella pagina */
 }
 
 .blood-group-box {
-    background-color: #f7f0eb; /* Colore tortora chiaro */
+    background-color: #f7f0eb;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -146,7 +142,7 @@ main {
 .blood-group-box h4 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #8B2C1D; /* Rosso Scuro */
+    color: #8B2C1D;
 }
 
 .blood-group-box p {
@@ -195,21 +191,21 @@ main {
 
 .action-box .btn {
     background-color: white;
-    color: #8B2C1D; /* Colore Rosso Scuro */
+    color: #8B2C1D; 
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
 }
 
 .action-box .btn:hover {
-    background-color: #f7f0eb; /* Colore più chiaro */
+    background-color: #f7f0eb;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #8B2C1D; /* Colore Rosso Scuro */
+    background-color: #8B2C1D;
     color: white;
 }
 
