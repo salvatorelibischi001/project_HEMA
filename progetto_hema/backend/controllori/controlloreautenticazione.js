@@ -32,7 +32,7 @@ const login = async (req, res) => {
         const { email, password } = req.body;
         const utente = await Utente.findOne({ email });
         if (!utente) {
-            console.log('Utente non trovato.');
+            return res.status(404).json({ message: 'Utente non trovato' });
         }
 
         const passwordCorretta = await bcrypt.compare(password, utente.password);

@@ -24,5 +24,5 @@ app.use('/api/auth', rotteautenticazione);//Si occupa del login e registrazione 
 // Avvio del server, uso la porta 4000.
 const PORT = 4000;
 app.listen(PORT, () => {
-    console.log(`Server in ascolto su http://localhost:${PORT}`);
+    console.log(`Server in ascolto!`);
 });
