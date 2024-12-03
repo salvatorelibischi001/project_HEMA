@@ -1,3 +1,5 @@
+//I modelli definiscono la struttura dei dati che veranno salvati del database di MongoDB;
+//Vale lo stesso per prenotazione.
 const mongoose = require('mongoose');
 
 const utenteSchema = new mongoose.Schema({
