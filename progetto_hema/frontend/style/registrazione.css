@@ -9,7 +9,6 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #FFFDD0; /* Bianco plasma */
-    margin: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Garantisce l'altezza minima della pagina */
