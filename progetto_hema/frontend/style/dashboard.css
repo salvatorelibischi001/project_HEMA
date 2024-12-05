@@ -1,93 +1,191 @@
-/* Reset di base */
+/* Reset dei margini e padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Corpo */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f7fa;
-    color: #333;
+    background-color: #FFFDD0; /* Bianco plasma */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+/* Header */
 header {
-    width: 100%;
-    padding: 20px;
-    background-color: #800020;
+    background-color: #8B2C1D; /* Borgogna */
+    padding: 20px 40px; /* Spaziatura interna */
     color: white;
-    text-align: center;
+}
+
+.header-container {
+    display: flex; /* Abilita layout flessibile */
+    justify-content: space-between; /* Distribuisce logo e pulsante */
+    align-items: center; /* Centra verticalmente gli elementi */
 }
 
 header .logo h1 {
-    font-size: 2.5rem;
+    font-size: 2rem; /* Dimensione del logo */
+    margin: 0; /* Rimuove margini */
 }
 
-nav a {
-    margin: 0 15px;
-    text-decoration: none;
+header .btn-home {
+    background-color: white; /* Sfondo bianco */
+    color: black; /* Testo nero */
+    border: none; /* Rimuove bordo */
+    padding: 10px 20px; /* Spaziatura interna */
+    border-radius: 5px; /* Angoli arrotondati */
+    font-size: 1rem; /* Dimensione testo */
+    font-weight: bold; /* Testo in grassetto */
+    text-decoration: none; /* Rimuove sottolineatura */
+    cursor: pointer; /* Indicatore di cliccabilità */
+    transition: background-color 0.3s ease; /* Animazione cambio colore */
+}
+
+header .btn-home:hover {
+    background-color: #F5F5F5; /* Cambia sfondo a grigio chiarissimo */
+}
+
+/* Lato destro: Avatar e pulsanti */
+.user-actions {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: left;
+}
+
+.user-actions .avatar {
+    width: 80px; /* Aumentata dimensione del cerchio */
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 10px; /* Spaziatura dall'avatar */
+}
+
+.user-actions p{
+        display: inline;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        position: absolute;
+        font-weight: bold;
+}
+
+.user-actions a {
+    display: block;
+    background-color: #8B2C1D; /* Borgogna */
     color: white;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #ffd700;
-}
-
-/* Dashboard */
-.dashboard-container {
-    padding: 40px;
-    max-width: 1000px;
-    margin: 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-top: 3px; /* Distanza di 3px tra l'avatar e i pulsanti */
     text-align: center;
 }
 
-.dashboard-container h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+.user-actions a:hover {
+    background-color: #A63A2E;
 }
 
-.info-box {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
+/* Lato sinistro: Prenotati */
+.reservation-box {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
 }
 
-.info-box h3 {
-    font-size: 2rem;
-    color: #800020;
-    margin-bottom: 20px;
-}
-
-.info-box p {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-}
-
-.info-box a {
-    padding: 12px 25px;
-    background-color: #800020;
+.reservation-box .btn-reservation {
+    background-color: #8B2C1D;
     color: white;
-    font-weight: bold;
+    padding: 12px 20px;
     border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
     text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    
 }
 
-.info-box a:hover {
-    background-color: #b3003b;
-    transform: translateY(-5px);
+.reservation-box p{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.reservation-box h2{
+    font-style: italic;
+    font-weight: bold;
+}
+
+.btn-reservation:hover{
+    background-color: #A63A2E;
+    text-decoration: none;
+}
+
+/* Corpo centrale */
+main {
+    flex: 1;
+    margin: 100px auto;
+    max-width: 800px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Box centrali */
+.info-section .user-info-box,
+.info-section .history-box {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-height: 300px;
+    text-align: left;
+    margin-bottom: 20px;
+    width: 500px;
+    height: 250px;
+}
+
+.info-section .user-info-box h2,
+.info-section .history-box h2 {
+    color: #8B2C1D;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.info-section .user-info-box p,
+.info-section .history-box ul {
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 /* Footer */
 footer {
-    text-align: center;
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    position: fixed;
     width: 100%;
-    bottom: 0;
+    background-color: #8B2C1D; /* Borgogna */
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: yellow;
+    text-decoration: none;
 }

@@ -1,13 +1,70 @@
 <!DOCTYPE html>
 <html lang="it">
-    <head>
-        <title>HEMA - Dashboard</title>
-        <link rel="icon" type="image/png" href="favicon_32x32.png">
-        <link rel="stylesheet" href="dashboard.html">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-    </head>
-    <body>
-        
-    </body>
+<head>
+    <title>HEMA - Dashboard</title>
+    <link rel="stylesheet" href="style/dashboard.css">
+    <link rel="icon" type="image/png" href="images/favicon_32x32.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>HEMA</h1>
+            </div>
+            <div class="home-button-container">
+                <a href="index.html" class="btn-home">Home</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Corpo del sito -->
+    <main>
+        <!-- Lato destro alto: Avatar, Logout e Impostazioni -->
+        <section class="user-actions">
+                <img src="images/joel_img.jpeg" alt="Avatar" class="avatar">
+                <p id="nome">Nome Utente</p>
+                <div class="user-buttons">
+                    <a href="index.html" class="btn-logout">Logout</a>
+                    <a href="#" class="btn-settings">Impostazioni</a>
+                </div>
+        </section>
+
+        <!-- Lato sinistro alto: Prenotati -->
+        <section class="reservation-box">
+            <h2>Dona o richiedi!</h2>
+            <p>Dona il tuo sangue o fai richiesta per una trasfusione.</p>
+           <a href="prenotazione.html" class="btn-reservation">Prenotati ora</a>
+        </section>
+
+        <!-- Corpo centrale -->
+        <section class="info-section">
+            <!-- Box Info Utente -->
+            <div class="user-info-box">
+                <h2>Informazioni Utente</h2>
+                <p>Nome: [GET nome]</p>
+                <p>Email: [GET email]</p>
+                <p>Gruppo Sanguigno: [GET gruppoSanguigno]</p>
+            </div>
+
+            <!-- Box Storico Prenotazioni -->
+            <div class="history-box">
+                <h2>Storico Prenotazioni</h2>
+                <ul>
+                    <li>[GET prenotazione 1]</li>
+                    <li>[GET prenotazione 2]</li>
+                    <li>[GET prenotazione 3]</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>2024 HEMA. Progetto per Università degli studi Napoli Parthenope.</p>
+        <a href="about_us.html" id="about_us">Chi siamo?</a>
+    </footer>
+</body>
 </html>
