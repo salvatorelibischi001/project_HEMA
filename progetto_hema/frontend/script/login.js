@@ -18,7 +18,7 @@ document.getElementById('login-form').addEventListener('submit', async (event) =
             // Mostra un feedback di successo
             alert('Accesso riuscito!');
             // Reindirizza l'utente alla pagina principale
-            window.location.href = 'index.html';
+            window.location.href = 'dashboard.html';
         } else {
             const error = await response.json();
             // Mostra l'errore dal server
