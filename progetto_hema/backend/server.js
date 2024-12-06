@@ -40,7 +40,7 @@ app.post('/api/auth/login', async (req, res) => {
                 },
             });
         } else {
-            res.status(401).json({ message: 'Credenziali non valide' });
+            res.status(400).json({ message: 'Credenziali non valide' });
         }
     } catch (error) {
         res.status(500).json({ message: 'Errore del server', error });

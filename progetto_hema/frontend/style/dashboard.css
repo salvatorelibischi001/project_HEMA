@@ -146,8 +146,6 @@ main {
     padding: 0px 0px 20px 0px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-    text-align: left;
     margin-bottom: 20px;
     width: 500px;
     height: 250px;
@@ -162,7 +160,6 @@ main {
 
 .info-section .user-info-box p,
 .info-section .history-box ul {
-    font-size: 1rem;
     line-height: 1.5;
 }
 
@@ -183,6 +180,15 @@ main {
     padding: 10px 10px 0px 10px;
     margin-bottom: 10px;
 }
+
+.user-info-box p{
+    padding-left: 20px;
+}
+
+#userPrenotazioni{
+    padding-left: revert;
+}
+
 /* Footer */
 footer {
     width: 100%;
