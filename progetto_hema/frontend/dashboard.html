@@ -25,7 +25,7 @@
         <!-- Lato destro alto: Avatar, Logout e Impostazioni -->
         <section class="user-actions">
                 <img src="images/joel_img.jpeg" alt="Avatar" class="avatar">
-                <p id="nome">Nome Utente</p>
+                <p id="nomeUtente">Caricamento...</p>
                 <div class="user-buttons">
                     <a href="index.html" class="btn-logout">Logout</a>
                     <a href="#" class="btn-settings">Impostazioni</a>
@@ -43,23 +43,21 @@
         <section class="info-section">
             <!-- Box Info Utente -->
             <div class="user-info-box">
-            <div class="info-header">
-                <h2>Informazioni Utente</h2>
-            </div>
-                <p>Nome: [GET nome]</p>
-                <p>Email: [GET email]</p>
-                <p>Gruppo Sanguigno: [GET gruppoSanguigno]</p>
+                <div class="info-header">
+                    <h2>Informazioni Utente</h2>
+                </div>
+                <p>Nome: <span id="userNome">Caricamento...</span></p>
+                <p>Email: <span id="userEmail">Caricamento...</span></p>
+                <p>Gruppo Sanguigno: <span id="userGruppoSanguigno">Caricamento...</span></p>
             </div>
 
             <!-- Box Storico Prenotazioni -->
             <div class="history-box">
-            <div class="history-header">
-                <h2>Storico Prenotazioni</h2>
-            </div>
-                <ul>
-                    <li>[GET prenotazione 1]</li>
-                    <li>[GET prenotazione 2]</li>
-                    <li>[GET prenotazione 3]</li>
+                <div class="history-header">
+                    <h2>Storico Prenotazioni</h2>
+                </div>
+                <ul id="userPrenotazioni">
+                    <li>Caricamento...</li>
                 </ul>
             </div>
         </section>
@@ -70,5 +68,8 @@
         <p>2024 HEMA. Progetto per Università degli studi Napoli Parthenope.</p>
         <a href="about_us.html" id="about_us">Chi siamo?</a>
     </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
 </body>
 </html>

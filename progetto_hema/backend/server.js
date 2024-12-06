@@ -1,28 +1,63 @@
-//Il server è il cuore del backend, connette MongoDB usando mongoose. Inoltre, gestisce le varie rotte configura Express e Node.JS;
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const authRoutes = require('./rotte/rotteautenticazione');
 const prenotazioneRoutes = require('./rotte/rotteprenotazione');
-const rotteautenticazione = require('./rotte/rotteautenticazione');
 
 const app = express();
 
-// Middleware: serve a tradurre i dati JSON leggibili per JavaScript.
+// Middleware
 app.use(express.json());
 app.use(cors());
 
-// Connessione a MongoDB: stabilisco la connesione mediante mongooose.
+// Connessione a MongoDB
 mongoose
     .connect('mongodb://localhost:27017/hema', { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log('Connesso a MongoDB'))
+    .catch((err) => console.error('Errore nella connessione a MongoDB:', err));
 
-// Middleware per le rotte.
+// Simula un database per utenti (da sostituire con il tuo modello Mongoose)
+const User = mongoose.model('User', new mongoose.Schema({
+    email: String,
+    password: String,
+    nome: String,
+    cognome: String,
+}));
+
+// Endpoint per il login
+app.post('/api/auth/login', async (req, res) => {
+    const { email, password } = req.body;
+
+    try {
+        const user = await User.findOne({ email });
+        if (user && user.password === password) {
+            res.status(200).json({
+                message: 'Login effettuato con successo',
+                user: {
+                    nome: user.nome,
+                    cognome: user.cognome,
+                    email: user.email,
+                },
+            });
+        } else {
+            res.status(401).json({ message: 'Credenziali non valide' });
+        }
+    } catch (error) {
+        res.status(500).json({ message: 'Errore del server', error });
+    }
+});
+
+// Rotte esistenti
 app.use('/api/auth', authRoutes);
-app.use('/api/prenotazione', prenotazioneRoutes);//Si occupa della comunicazione di prenotazioni.
-app.use('/api/auth', rotteautenticazione);//Si occupa del login e registrazione utente.
+app.use('/api/prenotazione', prenotazioneRoutes);
 
-// Avvio del server, uso la porta 4000.
+// Middleware 404
+app.use((req, res) => {
+    res.status(404).json({ message: 'Endpoint non trovato' });
+});
+
+// Avvio server
 const PORT = 4000;
 app.listen(PORT, () => {
-    console.log(`Server in ascolto!`);
+    console.log(`Server in ascolto sulla porta ${PORT}`);
 });
