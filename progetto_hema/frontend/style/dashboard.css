@@ -59,7 +59,7 @@ header .btn-home:hover {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 300px;
-    text-align: left;
+    text-align: center;
 }
 
 .user-actions .avatar {
@@ -70,11 +70,8 @@ header .btn-home:hover {
 }
 
 .user-actions p{
-        display: inline;
-        margin-top: 30px;
-        margin-bottom: 20px;
-        position: absolute;
         font-weight: bold;
+
 }
 
 .user-actions a {
@@ -135,12 +132,10 @@ header .btn-home:hover {
 
 /* Corpo centrale */
 main {
-    flex: 1;
-    margin: 100px auto;
+    margin: 5.9px auto auto auto;
     max-width: 800px;
     padding: 20px;
     display: flex;
-    flex-direction: column;
     gap: 20px;
 }
 
@@ -148,10 +143,10 @@ main {
 .info-section .user-info-box,
 .info-section .history-box {
     background-color: #ffffff;
-    padding: 20px;
+    padding: 0px 0px 20px 0px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-height: 300px;
+
     text-align: left;
     margin-bottom: 20px;
     width: 500px;
@@ -160,7 +155,7 @@ main {
 
 .info-section .user-info-box h2,
 .info-section .history-box h2 {
-    color: #8B2C1D;
+    color: white;
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
@@ -171,6 +166,23 @@ main {
     line-height: 1.5;
 }
 
+.info-header{
+    background-color: #8B2C1D;
+    display: flex;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 10px 10px 0px 10px;
+    margin-bottom: 10px;
+}
+
+.history-header{
+    background-color: #8B2C1D;
+    display: flex;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 10px 10px 0px 10px;
+    margin-bottom: 10px;
+}
 /* Footer */
 footer {
     width: 100%;
