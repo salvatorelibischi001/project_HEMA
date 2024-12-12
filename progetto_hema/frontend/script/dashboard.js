@@ -24,9 +24,9 @@ function logout(){
  
          // Aggiorna le informazioni nella dashboard nomeAvatar e nome per evitare ambiguità tra le veriabili.
          document.getElementById('nomeAvatar').textContent = userInfo.nome;
-         document.getElementById('nome').textContent = userInfo.nome || 'Nome non disponibile';
-         document.getElementById('email').textContent = userInfo.email || 'Email non disponibile';
-         document.getElementById('gruppoSanguigno').textContent = userInfo.gruppoSanguigno || 'Gruppo sanguigno non disponibile';
+         document.getElementById('nome').textContent = userInfo.nome;
+         document.getElementById('email').textContent = userInfo.email;
+         document.getElementById('gruppoSanguigno').textContent = userInfo.gruppoSanguigno;
  
      } catch (err) {
          console.error('Errore nel caricamento delle informazioni utente:', err);

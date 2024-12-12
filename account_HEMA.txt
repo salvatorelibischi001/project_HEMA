@@ -6,3 +6,9 @@ password100
 
 mario.rossi@gmail.com
 Mario_rossi
+
+anna.bianchi@gmail.com
+anna_bianchi
+
+domenico.zigarelli@gmail.com
+domenicozigarelli

@@ -26,9 +26,10 @@ app.get('/api/user/info', async (req, res) => {
     try {
         const email = req.query.email; // Recupera l'email dalla query 
 
+        //Ricerca informazioni utente tramite amail di login.
         const utente = await Utente.findOne({ email });
         if (!utente) {
-            return res.status(404).json({ message: 'Utente non trovato' });
+            return res.status(404).json({ message: 'Utente non trovato' });//Se l'email è diversa da quella inserita o non esistente.
         }
 
         res.status(200).json({
