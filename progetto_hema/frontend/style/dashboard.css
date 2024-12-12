@@ -71,7 +71,6 @@ header .btn-home:hover {
 
 .user-actions p{
         font-weight: bold;
-
 }
 
 .user-actions a {
@@ -182,6 +181,10 @@ main {
 }
 
 .user-info-box p{
+    padding-left: 20px;
+}
+
+.history-box p{
     padding-left: 20px;
 }
 

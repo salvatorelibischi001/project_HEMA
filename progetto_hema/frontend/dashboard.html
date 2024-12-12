@@ -22,13 +22,12 @@
 
     <!-- Corpo del sito -->
     <main>
-        <!-- Lato destro alto: Avatar, Logout e Impostazioni -->
+        <!-- Lato destro alto: Avatar e Logout -->
         <section class="user-actions">
                 <img src="images/joel_img.jpeg" alt="Avatar" class="avatar">
-                <p id="nomeUtente">Caricamento...</p>
+                <p id="nomeAvatar">Caricamento...</p>
                 <div class="user-buttons">
-                    <a href="index.html" class="btn-logout">Logout</a>
-                    <a href="#" class="btn-settings">Impostazioni</a>
+                    <a href="#" class="btn-logout" onclick="logout()">Logout</a>
                 </div>
         </section>
 
@@ -41,14 +40,15 @@
 
         <!-- Corpo centrale -->
         <section class="info-section">
+
             <!-- Box Info Utente -->
             <div class="user-info-box">
                 <div class="info-header">
                     <h2>Informazioni Utente</h2>
                 </div>
-                <p>Nome: <span id="userNome">Caricamento...</span></p>
-                <p>Email: <span id="userEmail">Caricamento...</span></p>
-                <p>Gruppo Sanguigno: <span id="userGruppoSanguigno">Caricamento...</span></p>
+                <p>Utente: <span id="nome">Caricamento...</span></p>
+                <p>Email: <span id="email">Caricamento...</span></p>
+                <p>Gruppo Sanguigno: <span id="gruppoSanguigno">Caricamento...</span></p>
             </div>
 
             <!-- Box Storico Prenotazioni -->
@@ -70,6 +70,6 @@
     </footer>
 
     <!-- Script -->
-    <script src="script/script.js"></script>
+    <script src="script/dashboard.js"></script>
 </body>
 </html>
