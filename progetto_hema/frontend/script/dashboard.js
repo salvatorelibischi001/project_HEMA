@@ -22,7 +22,7 @@ function logout(){
  
          const userInfo = await response.json();
  
-         // Aggiorna le informazioni nella dashboard nomeAvatar e nome per evitare ambiguità tra le veriabili.
+         // Aggiorna le informazioni nella dashboard nomeAvatar e nome per evitare ambiguità tra le variabili.
          document.getElementById('nomeAvatar').textContent = userInfo.nome;
          document.getElementById('nome').textContent = userInfo.nome;
          document.getElementById('email').textContent = userInfo.email;
