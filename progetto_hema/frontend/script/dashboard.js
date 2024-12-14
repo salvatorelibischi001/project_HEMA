@@ -10,7 +10,6 @@ function logout(){
      if (!email) {
          alert('Devi effettuare il login!');
          window.location.href = 'login.html'; // Reindirizza al login se manca l'email
-         return;
      }
  
      // Recupera le informazioni utente
