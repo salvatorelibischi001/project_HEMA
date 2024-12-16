@@ -32,7 +32,7 @@ function logout(){
          console.error('Errore nel caricamento delle informazioni utente:', err);
          document.getElementById('nome').textContent = 'Errore nel caricamento';
          document.getElementById('email').textContent = 'Errore nel caricamento';
-         document.getElementById('indirizzo').textContent = 'Errore nel caricamento'
+         document.getElementById('indirizzo').textContent = 'Errore nel caricamento';
          document.getElementById('gruppoSanguigno').textContent = 'Errore nel caricamento';
      }
  });
