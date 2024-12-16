@@ -13,7 +13,7 @@ module.exports = router;
 
 /*
 RICORDIAMO CHE:
--POST: Invio dati da parte del client al server;
--GET: Si fa richiesta di dati al server;
+-POST: Invio dati da parte del client al server e fa parte dell'HTTP;
+-GET: Si fa richiesta di dati al server ed è compreso nell'URL;
 -Ambo i verbi appartengono al protocollo di comunicazione HTTP.
 */
