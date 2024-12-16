@@ -35,6 +35,7 @@ app.get('/api/user/info', async (req, res) => {
         res.status(200).json({
             nome: utente.nome,
             email: utente.email,
+            indirizzo: utente.indirizzo,
             gruppoSanguigno: utente.gruppoSanguigno,
         });
     } catch (err) {
