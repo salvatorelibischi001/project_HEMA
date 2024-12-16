@@ -1,14 +1,6 @@
 salvatore.libi@gmail.com
-password1000
-
-simone.libischi@gmail.com
 password100
 
 mario.rossi@gmail.com
-Mario_rossi
+mario_rossi
 
-anna.bianchi@gmail.com
-anna_bianchi
-
-domenico.zigarelli@gmail.com
-domenicozigarelli

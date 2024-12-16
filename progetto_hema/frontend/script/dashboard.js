@@ -25,12 +25,14 @@ function logout(){
          document.getElementById('nomeAvatar').textContent = userInfo.nome;
          document.getElementById('nome').textContent = userInfo.nome;
          document.getElementById('email').textContent = userInfo.email;
+         document.getElementById('indirizzo').textContent = userInfo.indirizzo;
          document.getElementById('gruppoSanguigno').textContent = userInfo.gruppoSanguigno;
  
      } catch (err) {
          console.error('Errore nel caricamento delle informazioni utente:', err);
          document.getElementById('nome').textContent = 'Errore nel caricamento';
          document.getElementById('email').textContent = 'Errore nel caricamento';
+         document.getElementById('indirizzo').textContent = 'Errore nel caricamento'
          document.getElementById('gruppoSanguigno').textContent = 'Errore nel caricamento';
      }
  });
